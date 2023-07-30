@@ -1,0 +1,5 @@
+program çalýþtýðýnda 1 sayi girþi yapýn  istetiði sorulur 
+girilen sayi negatif olamaz
+girilen sayi asla 100 den büyük olamaz
+aksi halde tekrar sayi istenir
+buna göre 0 dan girilen sayiya kadar olanlarýn toplamýný procedure ile yapýn

@@ -1,0 +1,79 @@
+uses crt;
+label durak1;
+  var
+    sayi1,i,sonuc:integer;
+    secim:char;
+    taban,yukseklik:integer;
+
+begin
+  durak1:
+  clrscr;
+  TextColor(yellow);
+  write('**********************************');
+  write('MENU');
+  write('**********************************');
+  writeln; TextColor(blue); TextBackground(11);
+  writeln('1-Girilen Sayinin Faktoriyelini Hesaplar ');
+  writeln('C-Girilen derecenin fahrenheit karsiligini bulur');
+  writeln('S-Bir Ucgenin taban yukseklik degerine alanini hesaplar.');
+  writeln('K cikis');
+  write('                 ');
+  writeln('**********************************');
+  write('Seciminiz Nedir = ');readln(secim);
+    clrscr;
+
+  if(secim = 's') then
+  secim:='S';
+  if(secim = 'c') then
+  secim:='C';
+  if(secim = 'k')then
+  secim:='K';
+
+  case secim of
+  '1': begin
+   clrscr;
+    write('Sayiyi Girin = ');readln(sayi1);
+    sonuc:=1;
+    for i:=1 to sayi1 do begin
+    sonuc:=sonuc*i;
+    end;// forun endi.
+      writeln('Sayinin Faktoriyeli = ',sonuc);
+      TextColor(yellow);
+      write('Menuye donmek icin Enter i Tuslayin ');readln;goto durak1;
+    end; //1 in endi.
+  'C':begin
+    clrscr;
+    write('Dereceyi girin = ');readln(sayi1);
+    sonuc:=32+sayi1*9 div 5;
+    write('Derecenin Fahrenheit Cinsi = ',sonuc);
+    writeln; TextColor(yellow);
+      write('Menuye donmek icin Enter i Tuslayin ');readln;goto durak1;
+    end;//c nin endi.
+  'S':begin
+    clrscr;
+    write('Ucgenin Tabanini Girin =');readln(taban);
+    write('Ucgenin Yuksekligini Girin = ');readln(yukseklik);
+    sonuc:=(taban*yukseklik)div 2;
+    write('Ucgenin Alani = ',sonuc);
+    writeln; TextColor(yellow);
+      write('Menuye donmek icin Enter i Tuslayin ');readln;goto durak1;
+    end;//S nin endi
+  'K':begin
+    clrscr;
+       TextColor(red); write('Cikis Yapiliyor...');delay(2000);exit;
+    end;
+
+  else begin
+        write('Hatali Tuslama .. ');delay(2000);goto durak1;
+    end;
+
+
+  end;  //case nin endi.
+
+
+
+  readln;
+
+
+end.
+

@@ -1,0 +1,33 @@
+uses crt;
+var
+  i,j:integer;
+  a,b:array[1..3,1..5]of integer;
+begin
+  clrscr;
+  for i:=1 to 2 do begin
+  for j:=1 to 3 do begin
+  write('A nin : ',i,',',j,' . degeri nedir : ');
+  readln(a[i,j])
+  end; // j end
+  end; // i end
+
+  //writeln(a[2,5]); //2.satırının 5. sutununu yazdır
+  for i:=1 to 2 do begin
+  for j:=1 to 3 do begin
+  write('B nin : ',i,',',j,' . degeri nedir : ');
+  readln(b[i,j]);
+  end; // j end
+  end; // i end
+
+  for i:=1 to 2 do begin
+  for j:=1 to 3 do begin
+  writeln('A ve B nin Birleşimi : ',a[i,j]+b[i,j]);
+  end; // j sonu
+  end; // i sonu
+
+
+
+
+  readln;
+end.//program sonu
+

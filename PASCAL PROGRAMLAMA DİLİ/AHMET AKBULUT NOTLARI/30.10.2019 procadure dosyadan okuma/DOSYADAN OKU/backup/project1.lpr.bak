@@ -1,0 +1,28 @@
+uses crt;
+var
+  dosya:text;
+  okunan:char;
+
+begin
+  clrscr;                          //bellek verileni temizler
+  Assign(dosya,'bilgiler.txt');   //dosyaya yazma işine yarar
+  /////////DOSYANIN VAR OLUP OLMADIGI//////////
+  {
+  {$I-}
+  reset(dosya);                 //belleği yeniden acar
+  {$I+}
+  if IOResult<>0  then   // giriş çıkış sonucu
+  writeln('HEDEFTEKI DOSYA YOKTUR.....')
+  else
+  write('HEDEFTEKI DOSYA VARDIR.....');
+  }
+  /////////////////////////////////////////////
+  reset(dosya);
+  while not eof(dosya) do begin  //end of file = dosya sonu
+    read(dosya,okunan); // dosya dan al oku
+    writeln(okunan)
+
+  end;
+  readln;
+end.
+

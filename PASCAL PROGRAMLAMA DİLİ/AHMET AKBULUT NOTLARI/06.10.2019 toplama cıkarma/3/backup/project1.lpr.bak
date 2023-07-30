@@ -1,0 +1,13 @@
+uses crt;
+var
+  a:integer;
+begin
+  clrscr;
+  write('Sayıyı Giriniz : ');
+  readln(a);
+  if (a<0) then writeln('Sayı Negatiftir : ',a);
+  else if (b > 0) then writeln('Sayı Pozitif bir sayidir ');
+  else write('Sayı Pozitifdir : ',a);
+  readln();
+end.
+

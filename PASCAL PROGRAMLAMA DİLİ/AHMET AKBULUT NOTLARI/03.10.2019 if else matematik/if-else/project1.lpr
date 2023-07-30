@@ -1,0 +1,20 @@
+uses crt;
+var
+a,b:integer;
+begin
+clrscr;
+
+write('Lutfen iki sayi giriniz  : ');
+readln(a,b);
+{
+if (a > b) then writeln('Birinci Sayi Ikinci Sayidan Buyuktur');
+if (a < b) then writeln('Birinci Sayi Ikinci Sayidan Kucuktur');
+if (a = b) then writeln('Iki Sayi Eşittir');
+}
+if (b < 0) then writeln('B negatif sayidir')
+{else writeln('B pozitif bir sayidir'); }
+else if (b > 0) then writeln('B Pozitif bir sayidir')
+else writeln('Sayi Notrdur');
+readln;
+end.
+

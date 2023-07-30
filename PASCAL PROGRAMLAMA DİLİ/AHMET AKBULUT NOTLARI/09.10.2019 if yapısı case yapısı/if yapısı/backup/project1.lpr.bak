@@ -1,0 +1,57 @@
+uses crt;
+label git;
+var
+x,y:integer;
+sec:char;
+toplam,cikar,carpma,bolme:integer;
+begin
+clrscr;
+write('Birinci Sayi Nedir : ');
+readln(x);
+write('Ikinci Sayi Nedir : ');
+readln(y);
+writeln('_____________________');
+git:
+clrscr;
+write('[+ - / *] Islemlerden Birini Seciniz : ');
+readln(sec);
+if (sec='+')then
+begin
+clrscr;
+toplam:=x+y;
+write('Islemin Sonucu : ',toplam);
+readln; goto git;
+end;
+if (sec='-')then
+begin
+clrscr;
+cikar:=x-y;
+write('Islemin Sonucu : ',cikar);
+readln; goto git;
+end;
+if (sec='*') then
+begin
+clrscr;
+carpma:=x*y;
+write('Islemin Sonucu : ',carpma);
+readln; goto git;
+end;
+if (sec='/') then
+begin
+clrscr;
+bolme:=x div y;
+Write('Islemin Sonucu : ',bolme);
+readln; goto git;
+end;
+if (sec<>'+') and (sec<>'-') and (sec<>'/') and (sec<>'*')then
+begin
+write('HATALI TUSLAMA YAPTINIZ');
+delay(2000);
+write('UZGUNUM KAPATMAK ZORUNDAYIM');
+delay (2000);
+exit;
+end;
+
+readln();
+end.
+

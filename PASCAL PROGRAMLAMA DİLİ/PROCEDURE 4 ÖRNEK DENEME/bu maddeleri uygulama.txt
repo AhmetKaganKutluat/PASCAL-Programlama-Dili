@@ -1,0 +1,5 @@
+1-programçalýþtýðýnda kaç tane sayý girileceðini sorar
+2-girilen sayi asla negatif olamaz.
+3-girilen sayi asla 100 den büyük olamaz.
+4-aksi halde tekrar sayi istenir.
+5-buna göre 0 dan sayiya kadar olan sayýlarýn toplamýný procedure kullanarak yap

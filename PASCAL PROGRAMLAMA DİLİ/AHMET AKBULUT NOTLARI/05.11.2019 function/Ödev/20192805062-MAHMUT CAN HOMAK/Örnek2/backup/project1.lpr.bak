@@ -1,0 +1,19 @@
+function topla(s1,s2 : integer) :integer;
+begin
+  topla:=s1+s2;
+
+end;
+
+var
+  s1,s2:integer ;
+  sonuc:integer ;
+begin
+  write('1.Sayiyi Giriniz : ');
+  readln(s1);
+  write('2.Sayiyi Giriniz : ');
+  readln(s2);
+  sonuc:=topla(s1,s2);
+  writeln('Islemin Sonucu : ' , sonuc);
+  readln;
+end.
+

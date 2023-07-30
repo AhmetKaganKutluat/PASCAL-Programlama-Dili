@@ -1,0 +1,41 @@
+//aski tablosu
+uses crt;
+label git;
+var
+tus:char;
+a,b,i:integer;
+begin
+  git:
+  clrscr;
+  TextColor(10);
+  writeln('****************************');
+  writeln('Adiniz   [1]              : ');
+  writeln('Toplama  [2]              : ');
+  writeln('Enter    [Enter]          : ');
+  writeln('Cikis    [ESC]            : ');
+  writeln('****************************');
+  Writeln('Lutfen Seciminizi Yapiniz : ');
+  repeat
+  tus:=readkey;
+
+  if (tus='1') then begin
+  writeln('MAHMUT CAN HOMAK'); readln;
+  goto git; end;
+
+  if (tus='2') then begin clrscr;
+  write('1. Sayiyi Giriniz : '); readln(a);
+  write('2. Sayiyi Giriniz : '); readln(b);
+  write('Isleminin Sonucu  : ',a+b);
+  readln; goto git; end;
+
+  if (tus=#13) then begin clrscr;
+  for i:=1 to 999 do begin
+  writeln('MAHMUT CAN HOMAK');
+  readln; end; goto git; end;
+
+  if (tus=#27) then exit;
+  until tus in ['1','2',#13,#27];
+
+  readln;
+end.
+

@@ -1,0 +1,61 @@
+uses crt;
+label durak1;
+Var
+  sayi : array[1..999] of real;
+  i,kac : integer;
+  toplamlari,ortalamalari: real;
+  secim :char;
+
+
+
+  procedure toplam;
+  begin
+
+    for i :=1 to kac do begin
+         toplamlari:= toplamlari+sayi[i];
+    end;
+    write('Sayilarin Toplami = ',toplamlari:0:2);
+  end;
+
+procedure ortalama;
+begin
+
+  for i:=1 to kac do begin
+       ortalamalari:=ortalamalari+sayi[i];
+       ortalamalari:=ortalamalari / kac;
+ end;
+
+  write('Sayilarin Ortalamalari = ',ortalamalari:0:2);
+  end;
+
+begin
+  TextColor(9);TextBackground(7);
+  write('Kac Sayi Girilecek giriniz = '); readln(kac);
+
+  for i:=1 to kac  do begin
+       write(i,'. Sayiyi Girin = ');
+       readln(sayi[i]);
+
+  end;
+  durak1:
+  clrscr;
+  writeln('Sayilarin toplami icin 1 i yi');
+  write('Sayilarin ortalamasi icin 2 yi tuslayin = ');readln(secim);
+  clrscr;
+
+  if(secim = '1')then
+  toplam;
+  if(secim='2')then
+  ortalama;
+  if(secim <>'1') and (secim <>'2') then
+  begin
+  write('Hatali Tuslama Yeniden Secim yapin  ');
+
+  delay(2500);goto durak1;
+  end;
+
+
+
+readln;
+end.
+

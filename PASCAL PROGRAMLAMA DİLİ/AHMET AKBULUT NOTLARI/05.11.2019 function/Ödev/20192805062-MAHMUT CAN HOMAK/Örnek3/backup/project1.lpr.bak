@@ -1,0 +1,23 @@
+function faktoriyel(sayi: integer) : integer;
+  var
+
+    i,fakt:integer;
+    begin
+      fakt:=1;
+      for i:= 1 to sayi do begin
+      fakt:=fakt*i;
+      end;
+
+
+
+ faktoriyel:=fakt;
+end;
+var
+  sayi:integer;
+begin
+  write('Faktoriyeli Alinmasi Gereken Sayiyi Giriniz : ');
+  readln(sayi);
+  writeln('Sayiyinin Sonucu : ', faktoriyel(sayi));
+  readln;
+end.
+

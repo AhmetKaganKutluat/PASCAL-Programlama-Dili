@@ -1,0 +1,30 @@
+uses crt;  //TYPED DOSYALAR
+
+TYPE
+    ogrenciler_kisisel=record
+      adi,soyadi,baba:String[30];
+      adres:string[200];
+      end;
+ Type
+     ogrenciler_ders=record
+       ders:string; yazili,sozlu,ort:real;
+  end;
+VAR
+  kisisel:ogrenciler_kisisel;
+  okul:ogrenciler_ders;
+begin
+clrscr;
+write('Ogrencinin Adi nedir : '); readln(kisisel.adi);
+write('Ogrencinin Soyadi nedir : '); readln(kisisel.soyadi);
+write('Ogrencinin Baba nedir : '); readln(kisisel.baba);
+write('Ogrencinin Adressi nedir : '); readln(kisisel.adres);
+writeln;writeln('-----------------------------------------');
+write('Aldigi ders nedir : '); readln(okul.ders);
+write('Yazili notu   nedir : '); readln(okul.yazili);
+write('Sozlu  notu nedir : '); readln(okul.sozlu);
+okul.ort:=(okul.yazili+okul.sozlu)/2;
+writeln;writeln('-----------------------------------------');
+Write(kisisel.adi,' ',kisisel.soyadi,' ',okul.ders,' : ',okul.ort:0:2);
+readln;
+end.
+

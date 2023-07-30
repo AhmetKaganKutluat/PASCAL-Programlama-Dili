@@ -1,0 +1,21 @@
+uses crt;
+var
+ad,soyad:string;
+gelir,gider,fark:Integer;
+begin
+  write('Adinizi Giriniz          :');
+  readln(ad);
+  write('Soyadinizi Giriniz       :');
+  readln(soyad);
+  writeln('____________________________________');
+  write('Geliriniz                :');
+  readln(gelir);
+  write('Gideriniz                :');
+  readln(gider);
+  fark:=gelir-gider;
+  writeln('__________________________________');
+  writeln('Adiniz ',ad,' Soyadiniz ',soyad,' Fark ',fark);
+  writeln('__________________________________');
+  readln();
+end.
+

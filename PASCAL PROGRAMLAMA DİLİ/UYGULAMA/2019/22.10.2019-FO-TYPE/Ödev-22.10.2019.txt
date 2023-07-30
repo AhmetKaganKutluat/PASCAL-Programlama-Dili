@@ -1,0 +1,29 @@
+Mod: Bir sayının bir sayının bölümünden kalan.
+
+
+
+
+Kullanıcıdan bir sayı istenecek,
+Bu sayı 3 ile 87 arasındadır.
+Bu aralıkta değilse,
+Hata mesajı ile uyarır ve tekrardan,
+Sayı isteme yerine gider.
+Buna Göre,,,
+3 ile 87 arasında kaç tane tek kaç tane çift sayı varsa adet sayılırını,
+alt alta yazdırdıktan sonra,
+bu çift sayıların hem de tek sayıların aralarına iki karakter boşluk bırakarak 
+yan yana yazdırınız.....
+
+
+
+
+
+
+-----------------------SORU2--------------------------------
+
+Klavyeden bir sayı istenecek 
+girilen,
+bu sayı 1 ile 16 arasındadır.
+Aksi haldeyse uyarır ve tekrar sayı ister,
+Buna göre girilen bu sayının Faktöryelini ekrana yazdırınız....
+(başlangıç 1 gir)!!!!

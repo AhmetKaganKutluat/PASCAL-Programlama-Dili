@@ -1,0 +1,20 @@
+uses crt;
+var
+   i:integer;
+
+begin
+  clrscr;
+  TextColor(10);
+  Randomize;
+  repeat
+    for i:=1 to 255 do begin
+    write(i);
+
+    end;
+
+
+  until KeyPressed;
+
+  readln;
+end.
+

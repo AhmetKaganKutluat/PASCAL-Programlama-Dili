@@ -1,0 +1,3 @@
+maxsimum 15 karakter bir meti girmek þartý ile bil kelime giriniz.
+buna göre kelimenin toplam karakter sayýsýnýn çarpým tablosuna ekrana alt
+alta yazdýrýn .

@@ -1,0 +1,28 @@
+uses crt;
+var
+ sayi1,sayi2:integer;
+ toplam,fark,carp,bol:integer;
+begin
+  clrscr;
+  write('Birinci Sayiyi Giriniz   :',' ');
+  readln(sayi1);
+  write('Ikinci Sayiyi Giriniz    :',' ');
+  readln(sayi2);
+  {
+  toplam:=sayi1+sayi2;
+  fark:=sayi1-sayi2;
+  carp:=sayi1*sayi2;
+  bol:=sayi1 div sayi2;       //iki tam sayının biribirine bölünmesi icin komutu
+  writeln('Toplami      :',' ',toplam);
+  writeln('Farki        :',' ',fark);
+  writeln('Carpimi      :',' ',carp);
+  writeln('Bolumu       :',' ',bol);
+  }
+  writeln('Toplami      :',' ',sayi1+sayi2);
+  writeln('Farki        :',' ',sayi1-sayi2);
+  writeln('Carpimi      :',' ',sayi1*sayi2);
+  writeln('Bolumu       :',' ',sayi1 div sayi2);
+  // üst taraftaki yöntemi kullanırsak tamamına etki eder
+readln;
+end.
+

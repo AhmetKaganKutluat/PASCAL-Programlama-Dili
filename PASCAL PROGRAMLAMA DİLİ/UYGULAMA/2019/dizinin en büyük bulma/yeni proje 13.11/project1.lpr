@@ -1,0 +1,33 @@
+uses crt;
+var
+i,j:integer;
+a,b:array[1..3,1..5] of integer;  //ilki satır ikinci sütun
+
+
+begin
+clrscr;
+for i:=1 to 2 do begin
+for j:=1 to 3 do begin
+write('A nin :',i,',',j,'. degeri nedir :');
+readln(a[i,j]);
+end; //j end
+end; //i end
+ //writeln(a[2,5]) // 2.satırın 5. sütun değerini  yazdırır .
+writeln('**************************************************');
+
+for i:=1 to 2 do begin
+for j:=1 to 3 do begin
+write('b nin :',i,',',j,'. degeri nedir :');
+readln(b[i,j]);
+end; //j end
+end; //i end
+
+for i:=1 to 2 do
+for j:=1 to 3 do               // iki tablonun tek tek toplanması
+Writeln(a[i,j]+b[i,j]);
+
+
+
+readln;
+end.
+

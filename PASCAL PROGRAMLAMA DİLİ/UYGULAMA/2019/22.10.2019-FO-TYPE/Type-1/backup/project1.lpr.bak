@@ -1,0 +1,32 @@
+uses crt;
+      Type
+        ogrenci=record
+          ADISOYADI:string;
+          YAS:integer;
+
+          end;
+        type
+              pozisyon=record
+                mevki:string[40];
+          end;
+ var
+   ogr:ogrenci;
+   poz:pozisyon;
+
+begin
+     clrscr;
+     textcolor(10);
+     write('Musterinin Adi-Soyadi :'); readln(ogr.ADISOYADI);
+     write('Musterinin Yasi Nedir :'); readln(ogr.YAS);
+     Write('Mevkisi Nedir :'); readln(poz.mevki);
+     writeln;
+     Writeln('Musteri Bilgileri :',ogr.ADISOYADI,' ',ogr.YAS,' ',poz.mevki);
+
+
+
+
+
+
+     readln;
+end.
+

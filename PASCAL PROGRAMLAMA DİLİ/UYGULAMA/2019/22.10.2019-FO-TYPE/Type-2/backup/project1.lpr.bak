@@ -1,0 +1,24 @@
+uses crt;
+     Type
+           bilgiler=record
+             ADI,SOYADI:string;
+
+       end;
+
+           var
+             ogrenci:bilgiler ;
+
+
+begin
+          clrscr;
+
+
+
+
+
+
+
+
+  readln;
+end.
+

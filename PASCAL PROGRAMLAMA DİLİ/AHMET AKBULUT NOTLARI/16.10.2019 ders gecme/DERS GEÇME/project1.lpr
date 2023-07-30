@@ -1,0 +1,85 @@
+uses crt;
+label yaziligit;
+label sozlugit;
+var
+ad,soyad,ders:string[60]; i:integer;
+yazililar,sozluler:array [1..999] of real;
+ytoplam,stoplam,ortalama:real; durum:string;
+harf:string; secim:char; dosya:text;
+
+
+begin
+clrscr;
+TextColor(7); TextBackground(4);
+write('Ogrencinin adi nedir     : '); readln(ad);
+write('Ogrencinin soyadi nedir  : '); readln(soyad);
+write('Ogrencinin dersi nedir   : '); readln(ders);
+
+yaziligit:
+clrscr;
+ytoplam:=0.0;
+for i:=1 to 3 do begin
+write(i,'. yazili notu nedir : ');readln(yazililar[i] );
+ytoplam:=ytoplam+yazililar[i];
+if(yazililar[i]<0) or (yazililar[i]>100) then
+begin
+writeln('Hatali yazili notu girdiniz. Yonlendiriliyorsunuz...');
+delay(1500); goto yaziligit;
+end; //if sonu
+
+
+end; //for sonu
+
+sozlugit:
+clrscr;
+stoplam:=0.0;
+for i:=1 to 2 do begin
+write(i,'. sozlu notu nedir : ');readln(sozluler[i] );
+stoplam:=stoplam+sozluler[i];
+if(sozluler[i]<0) or (sozluler[i]>100) then
+begin
+writeln('Hatali sozlu notu girdiniz. Yonlendiriliyorsunuz...');
+delay(1500); goto sozlugit;
+end; //if sonu
+
+end; //for sonu
+
+// 60 70 80    40 50 --> 62.50    trunc=yuvarlanan tam kısmı gösterir   round= tam sayıya yuvarlar.
+
+ortalama:=trunc((round(ytoplam)*0.70/3) + round(stoplam*0.30/2));
+writeln(ortalama:0:2);
+
+if(ortalama>=60) then
+durum:='SINIFI GECTI' else
+durum:='SINIFTA KALDI';
+
+if (ortalama>=0) and (ortalama<=40) then harf:='FF' else
+if (ortalama>=41) and (ortalama<=55) then harf:='DD' else
+if (ortalama>=56) and (ortalama<=60) then harf:='CC' else
+if (ortalama>=61) and (ortalama<=70) then harf:='BC' else
+if (ortalama>=71) and (ortalama<=80) then harf:='BB' else
+if (ortalama>=81) and (ortalama<=94) then harf:='BA' else
+harf:='AA';
+
+writeln(ad,' ',soyad,' ',ders,' ',ortalama:0:2,' ',durum,' ',harf);
+write('Bilgiler Yuklensin mi? [e / h]'); readln(secim);
+secim:=upcase(secim);
+if (secim='E') then begin
+ Assign(dosya,'ogrbilgi.txt'); // Yolu Belirtir
+ append(dosya);//Kayıt Yapacağım
+ writeln(dosya,ad,' ',soyad,' ',ders,' ',ortalama:0:2,' ',durum,' ',harf);
+ close(dosya);
+ writeln('Bilgiler Başariyla Kaydedildi');
+
+
+end else begin
+ writeln('Yanlis Tuşlama.......');
+ writeln('Program Kapaniyor....');
+ delay(2000); exit;
+
+end;
+
+
+readln;
+end.
+

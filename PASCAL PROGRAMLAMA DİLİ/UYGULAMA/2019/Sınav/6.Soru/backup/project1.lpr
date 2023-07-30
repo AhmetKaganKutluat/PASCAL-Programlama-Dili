@@ -1,0 +1,26 @@
+uses crt;
+type
+  musteribilgi=record
+    ADI,SOYADI,MEMLEKET,ADRES:STRING;
+
+  end;
+  var
+    bilgi:musteribilgi;
+
+begin
+  clrscr; TextColor(9);TextBackground(7);
+  write('Adinizi girin  = ');  readln(bilgi.ADI);
+  write('Soyadinizi girin  = ');  readln(bilgi.SOYADI);
+  write('Memleketinizi girin  = ');  readln(bilgi.MEMLEKET);
+  write('Adresinizi girin  = ');  readln(bilgi.ADRES);
+  writeln;
+  writeln('**********************************************************');
+  writeln;
+  Writeln('Adiniz       = ',bilgi.ADI);
+  writeln('Soyadiniz    = ',bilgi.SOYADI);
+  writeln('Memleketiniz = ',bilgi.MEMLEKET);
+  writeln('Adresiniz    = ',bilgi.ADRES);
+
+  readln;
+end.
+

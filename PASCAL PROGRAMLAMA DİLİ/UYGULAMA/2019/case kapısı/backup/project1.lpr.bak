@@ -1,0 +1,58 @@
+uses CRT;
+label git;  //etiket tanımlandı.
+
+//KILAVYEDEN GİRİLEN IKI AYRI SAYI ICIN +,-,CARPMA İŞLEMLERİNDEN HANGİSİ
+//SECILIRSE BU ISLEMI CASE YAPISIYLA KONTROL EDINIZ HER BIR
+//ISLEMDEN SONRA PROGRAM TEKRAR ANA MENUYE DONER BU ISLEMLERIN DISINDA BASKA BIR SECENEK ISARETLERİNSE
+//PROGRAM 2.5 SANIYE SONRA KAPANIR
+
+var
+ A,B:integer;
+ toplam,fark,carpim:integer;
+ secim:char;
+
+
+begin
+CLRSCR;
+write('Birinci sayi nedir : ');  readln(A);
+write('Ikinci sayi nedir  : ');  readln(B);
+write('******************************');
+git:
+clrscr;
+write('Lutfen [+,-,*] dan birini seciniz :');
+readln(secim);
+case secim of
+'+':
+  begin
+   toplam:=A+B;
+   writeln('Iki sayinin toplami :',toplam);
+   readln; goto git;
+  end;
+'-':
+  begin
+   fark:=A-B;
+   writeln('Iki sayinin farki :',fark);
+   readln; goto git;
+  end;
+'*':
+  begin
+   carpim:=A*b;
+   writeln('Iki sayinin carpimi:',carpim);
+   readln; goto git;
+  end;
+
+
+
+
+
+end;//case sonlandırılması
+
+
+
+
+
+
+
+READLN;
+end.
+

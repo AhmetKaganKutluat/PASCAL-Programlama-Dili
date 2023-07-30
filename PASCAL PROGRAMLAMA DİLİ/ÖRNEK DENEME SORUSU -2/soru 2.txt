@@ -1,0 +1,5 @@
+program çalýþtýðýnda kaç tane sayý giriþi   istetiði sorulur 
+girilen sayi negatif olamaz
+girilen sayi asla 100 den büyük olamaz
+aksi halde tekrar sayi istenir
+ girilen sayiylarýn toplamýný veren  programý yapýn
